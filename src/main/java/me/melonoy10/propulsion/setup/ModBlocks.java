@@ -15,20 +15,23 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
 
-    public static final RegistryObject<Block> DOUGH_BLOCK = register("dough_block", () -> new Block(AbstractBlock.Properties.of(Material.STONE)
-            .strength(3, 10)
-            .harvestLevel(2)
-            .harvestTool(ToolType.PICKAXE)
-            .requiresCorrectToolForDrops()
-            .sound(SoundType.STONE)));
+    public static final RegistryObject<Block> DOUGH_BLOCK = register("dough_block", () ->
+            new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .strength(3, 10)
+                    .harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)));
+
 //    public static final RegistryObject<Block> DOUGH_BLOCK = register("dough_block", () ->
 //            new Block(AbstractBlock.Properties.of(Material.CAKE).harvestLevel(2).strength(3, 10).sound(SoundType.FUNGUS).jumpFactor(10).harvestTool(ToolType.HOE)));
+
     public static final RegistryObject<Block> DOUGH_LAYER = register("dough_layer", () ->
             new Block(AbstractBlock.Properties.of(Material.CAKE).strength(3, 10).sound(SoundType.FUNGUS).jumpFactor(10)));
 
     static void register() {}
 
-    private static <T extends Block>RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return Registration.BLOCKS.register(name, block);
     }
 

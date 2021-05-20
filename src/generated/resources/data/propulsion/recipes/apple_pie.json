@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "propulsion:dough_block"
+    }
+  ],
+  "result": {
+    "item": "propulsion:apple_pie",
+    "count": 9
+  }
+}

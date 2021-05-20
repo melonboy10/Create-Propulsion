@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "propulsion:dough_layer"
+  },
+  "result": "propulsion:apple_pie",
+  "experience": 0.7,
+  "cookingtime": 200
+}

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "propulsion:dough_block",
+    "propulsion:dough_layer"
+  ]
+}

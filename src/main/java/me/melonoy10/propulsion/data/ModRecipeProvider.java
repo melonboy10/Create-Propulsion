@@ -31,9 +31,9 @@ public class ModRecipeProvider extends RecipeProvider {
 
         CookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.DOUGH_LAYER.get()), ModItems.APPLE_PIE.get(), 0.7f, 200)
                 .unlockedBy("has_item", has(ModBlocks.DOUGH_LAYER.get()))
-                .save(consumer, "silver_ingot_smelting");
-        CookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.DOUGH_LAYER.get()), ModItems.APPLE_PIE.get(), 0.7f, 100)
+                .save(consumer, "apple_pie_from_smelting");
+        CookingRecipeBuilder.cooking(Ingredient.of(ModBlocks.DOUGH_LAYER.get()), ModItems.APPLE_PIE.get(), 0.7f, 100, IRecipeSerializer.SMOKING_RECIPE)
                 .unlockedBy("has_item", has(ModBlocks.DOUGH_LAYER.get()))
-                .save(consumer, "silver_ingot_blasting");
+                .save(consumer, "apple_pie_from_cooking");
     }
 }
