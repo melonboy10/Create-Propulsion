@@ -2,7 +2,10 @@ package me.melonoy10.propulsion.setup;
 
 import me.melonoy10.propulsion.PropulsionMod;
 import net.minecraft.block.Block;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,18 +18,27 @@ import static me.melonoy10.propulsion.PropulsionMod.MOD_ID;
 public class Registration {
 
     public static final DeferredRegister<Block> BLOCKS = create(ForgeRegistries.BLOCKS);
+    public static final DeferredRegister<ContainerType<?>> CONTAINERS = create(ForgeRegistries.CONTAINERS);
     public static final DeferredRegister<Item> ITEMS = create(ForgeRegistries.ITEMS);
+    public static final DeferredRegister<IRecipeSerializer<?>> RECIPE_SERIALIZERS = create(ForgeRegistries.RECIPE_SERIALIZERS);
+    public static final DeferredRegister<TileEntityType<?>> TILE_ENTITIES = create(ForgeRegistries.TILE_ENTITIES);
 
     public static void register() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BLOCKS.register(modEventBus);
+        CONTAINERS.register(modEventBus);
         ITEMS.register(modEventBus);
+        RECIPE_SERIALIZERS.register(modEventBus);
+        TILE_ENTITIES.register(modEventBus);
 
-        ModItems.register();
         ModBlocks.register();
+//        ModContainerTypes.register();
+        ModItems.register();
+//        ModRecipes.register();
+//        ModTileEntityTypes.register();
     }
 
     private static <T extends IForgeRegistryEntry<T>> DeferredRegister<T> create(IForgeRegistry<T> registry) {
-        return DeferredRegister.create(registry, MOD_ID);
+        return DeferredRegister.create(registry, PropulsionMod.MOD_ID);
     }
 }

@@ -1,3 +1,5 @@
 {
-  "item.propulsion.apple_pie": "Apple Pie"
+  "item.propulsion.apple_pie": "Apple Pie",
+  "block.propulsion.dough_block": "Dough Block",
+  "block.propulsion.dough_layer": "Dough Layer"
 }

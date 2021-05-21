@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "propulsion:dough_layer"
+          "name": "minecraft:air"
         }
       ],
       "conditions": [
